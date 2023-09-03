@@ -5,7 +5,7 @@
             <thead>
                 <tr>
                     <th>Nama</th>
-                    <th>Rangking</th>
+                    <th>Urutan dari layak ke tidak layak</th>
                 </tr>
             </thead>
             <tbody>

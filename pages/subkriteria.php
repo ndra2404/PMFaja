@@ -1,5 +1,5 @@
 <?php
-$kriterias = query("SELECT * FROM kriteria");
+$kriterias = query("SELECT a.nama as subkri,b.nama,a.nilai FROM sub_kriteria a left join kriteria b on a.kriteria_id = b.id");
 ?>
 <div class="col-md-12 justify-content-center panel">
     <div class="table-responsive">
@@ -8,8 +8,8 @@ $kriterias = query("SELECT * FROM kriteria");
                 <tr>
                     <th>No</th>
                     <th>Kriteria</th>
-                    <th>Jenis</th>
-                    <th>Keterangan</th>
+                    <th>Sub Kriteria</th>
+                    <th>Bobot</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,8 +20,8 @@ $kriterias = query("SELECT * FROM kriteria");
                     <tr>
                         <td class="whitespace-nowrap"><?php echo $no++?></td>
                         <td ><?php echo $kriteria['nama']?></td>
-                        <td ><?php echo $kriteria['jenis']=='cf'?'Core Factor':'Secondary Factor'?></td>
-                        <td ><?php echo $kriteria['ket']?></td>
+                        <td ><?php echo $kriteria['subkri']?></td>
+                        <td ><?php echo $kriteria['nilai']?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -305,12 +305,12 @@ $vsf = query("select * from kriteria where jenis='sf'");
 
 <div class="col-md-12 justify-content-center panel mt-2">
     <div class="table-responsive">
-    <h1 class="text-lg font-semibold">Rangking</h1>
+    <h1 class="text-lg font-semibold">Peringkat Calon penerima bantuan</h1>
     <table class="table table-hover table-striped mb-2">
             <thead>
                 <tr>
                     <th>Nama</th>
-                    <th>Rangking</th>
+                    <th>Urutan dari layak ke tidak layak</th>
                 </tr>
             </thead>
             <tbody>

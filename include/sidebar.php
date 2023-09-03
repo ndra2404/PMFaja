@@ -188,7 +188,7 @@
                 </ul>
             </li>
             <?php endif;?>
-            <?php if($_SESSION['level']==2) :?>
+            <?php if($_SESSION['level']==2||$_SESSION['level']==1) :?>
             <li class="menu nav-item">
                 <a href="?pages=rangking" class="nav-link group">
                     <div class="flex items-center">
@@ -210,7 +210,7 @@
                                 fill="currentColor"
                             />
                         </svg>
-                        <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Ranking</span>
+                        <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Calon penerima bantuan</span>
                     </div>
                 </a>
             </li> 
