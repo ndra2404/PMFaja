@@ -302,7 +302,30 @@ $vsf = query("select * from kriteria where jenis='sf'");
         </table>
     </div>
 </div>
-
+<div class="col-md-12 justify-content-center panel mt-2">
+    <div class="table-responsive">
+    <h1 class="text-lg font-semibold">Calon Penerima bantuan</h1>
+    <table class="table table-hover table-striped mb-2">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    $no=1;
+                    $vwpenduduk = query("select * from hasil");
+                foreach ($vwpenduduk as $data) : ?>
+                    <tr>
+                        <td><?= $data['nama_penduduk']; ?></td>
+                        <td><?= ($data['hasil']<4.00)?'Layak ':'Tidak Layak'?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 <div class="col-md-12 justify-content-center panel mt-2">
     <div class="table-responsive">
     <h1 class="text-lg font-semibold">Peringkat Calon penerima bantuan</h1>
